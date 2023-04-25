@@ -1,38 +1,91 @@
 .App {
-  text-align: center;
+	max-width: 1440px;
+	padding: 30px 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header > button {
+	background: none;
+	border: none;
+	font: inherit;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-left: auto;
+	cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header > button:focus,
+.header > button:hover {
+	font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.quotes-container {
+	width: min(820px, 80vw);
+	margin-inline: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.author {
+	font-size: 36px;
+	font-weight: 700;
+	margin-top: 48px;
+	padding-inline: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote {
+	margin-block: 140px;
+}
+
+.quote-text {
+	font-size: 36px;
+	margin: 0;
+	padding-inline: 100px;
+	border-left: 8px solid #f7df94;
+}
+
+.quote-text::before {
+	content: "\201C";
+}
+
+.quote-text::after {
+	content: "\201D";
+}
+
+.quote-btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px 29px;
+	margin-inline: 78px;
+	text-align: left;
+	margin-top: 109px;
+	color: #4f4f4f;
+	cursor: pointer;
+}
+
+.quote-btn:hover,
+.quote-btn:focus {
+	background: #333333;
+	color: #f2f2f2;
+}
+
+.quote-author {
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.quote-genre {
+	color: #828282;
+	margin-block: 8px 0px;
+}
+
+.arrow > svg {
+	width: 25px;
+	height: 25px;
+	color: transparent;
+}
+
+.quote-btn:hover .arrow > svg,
+.quote-btn:focus .arrow > svg {
+	color: #f2f2f2;
 }
